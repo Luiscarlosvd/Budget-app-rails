@@ -30,7 +30,7 @@ class GroupsController < ApplicationController
       if @group.save
         format.html { redirect_to groups_path, notice: 'Category was successfully created.' }
       else
-        flash.now[:alert] = @group.errors.full_messages.join(", ")
+        flash.now[:alert] = @group.errors.full_messages.join(', ')
         format.html { render :new, status: :unprocessable_entity }
       end
     end
