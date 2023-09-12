@@ -1,5 +1,5 @@
 <%= form_with model: @group, url: groups_path, method: :post do |f| %>
-  <%= render partial: 'shared/navbar', locals: {page_title: 'ADD CATEGORY', left_button: 'Back', right_button: 'Search' } %>
+  <%= render partial: 'shared/navbar', locals: {page_title: 'ADD CATEGORY', left_button: groups_path, right_button: 'Search' } %>
   <div class="shadow-sm bg-white">
     <div class="bg-gray-200 border border-gray-300 flex items-center justify-center h-9">
         <h2 class="font-bold text-gray-500"> NEW CATEGORY </h2>
