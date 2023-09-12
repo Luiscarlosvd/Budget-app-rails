@@ -6,6 +6,10 @@ class GroupsController < ApplicationController
     @groups = @user.groups.includes(:purchases)
   end
 
+  def show
+    @group = current_user.groups.includes(:purchases).find(params[:id])
+  end
+
   def new
     @group = Group.new
   end
