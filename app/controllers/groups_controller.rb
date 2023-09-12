@@ -1,9 +1,9 @@
 class GroupsController < ApplicationController
   def index
-    if current_user
-      @user = current_user
-      @groups = @user.groups.includes(:purchases)
-    end
+    return unless current_user
+
+    @user = current_user
+    @groups = @user.groups.includes(:purchases)
   end
 
   def new
