@@ -1,7 +1,9 @@
 require './spec/rails_helper'
 
 RSpec.describe Purchase, type: :model do
-  let!(:user) { User.create(name: 'Luis', email: 'luis@gmail.com', password: 'password', password_confirmation: 'password') }
+  let!(:user) do
+    User.create(name: 'Luis', email: 'luis@gmail.com', password: 'password', password_confirmation: 'password')
+  end
   subject { Purchase.new(name: 'Sandwich', amount: 1.5, author_id: user.id) }
 
   context 'Validation' do

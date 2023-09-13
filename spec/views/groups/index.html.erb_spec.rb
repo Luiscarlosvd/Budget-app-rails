@@ -7,18 +7,20 @@ RSpec.describe 'Groups', type: :system do
     end
 
     let!(:group) do
-      Group.create(name: 'Subway', icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png', author_id: user.id)
+      Group.create(name: 'Subway',
+                   icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png', author_id: user.id)
     end
 
     let!(:group2) do
-      Group.create(name: 'Mac donalds', icon: 'https://es.logodownload.org/wp-content/uploads/2018/11/McDonalds-logo-11.png', author_id: user.id)
+      Group.create(name: 'Mac donalds',
+                   icon: 'https://es.logodownload.org/wp-content/uploads/2018/11/McDonalds-logo-11.png', author_id: user.id)
     end
 
     before do
       sign_in user
       visit groups_path
     end
-    
+
     it 'displays the groups' do
       expect(page).to have_content('Subway')
       expect(page).to have_content('Mac donalds')
@@ -35,7 +37,7 @@ RSpec.describe 'Groups', type: :system do
     end
 
     it 'displays the total purchases for each group' do
-      expect(page).to have_content("$0")
+      expect(page).to have_content('$0')
     end
 
     it 'displays the "ADD A NEW CATEGORY" button' do

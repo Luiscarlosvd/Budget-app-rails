@@ -35,7 +35,8 @@ RSpec.describe User, type: :model do
 
   context 'Devise Configuration' do
     it 'should include devise modules' do
-      expect(described_class.devise_modules).to include(:database_authenticatable, :registerable, :recoverable, :rememberable, :validatable)
+      expect(described_class.devise_modules).to include(:database_authenticatable, :registerable, :recoverable,
+                                                        :rememberable, :validatable)
     end
   end
 end

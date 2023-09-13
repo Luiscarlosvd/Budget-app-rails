@@ -1,7 +1,9 @@
 require './spec/rails_helper'
 
 RSpec.describe Group, type: :model do
-  let!(:user) { User.create(name: 'Luis', email: 'luis@gmail.com', password: 'password', password_confirmation: 'password') }
+  let!(:user) do
+    User.create(name: 'Luis', email: 'luis@gmail.com', password: 'password', password_confirmation: 'password')
+  end
   subject { Group.new(name: 'Subway', icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png', author_id: user.id) }
 
   context 'Validation' do
