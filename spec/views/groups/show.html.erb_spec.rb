@@ -8,7 +8,8 @@ RSpec.describe 'Groups', type: :system do
 
     let!(:group) do
       Group.create(name: 'Subway',
-                   icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png', author_id: user.id)
+                   icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png',
+                   author_id: user.id)
     end
 
     let!(:purchase) do

@@ -8,12 +8,14 @@ RSpec.describe 'Groups', type: :system do
 
     let!(:group) do
       Group.create(name: 'Subway',
-                   icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png', author_id: user.id)
+                   icon: 'https://i.pinimg.com/originals/4b/eb/2a/4beb2a37a5810f9eacc37e3c6234889c.png',
+                   author_id: user.id)
     end
 
     let!(:group2) do
       Group.create(name: 'Mac donalds',
-                   icon: 'https://es.logodownload.org/wp-content/uploads/2018/11/McDonalds-logo-11.png', author_id: user.id)
+                   icon: 'https://es.logodownload.org/wp-content/uploads/2018/11/McDonalds-logo-11.png',
+                   author_id: user.id)
     end
 
     before do
