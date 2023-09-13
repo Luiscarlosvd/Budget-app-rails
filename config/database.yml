@@ -85,6 +85,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: Budget_app_rails_production
   username: Budget_app_rails
   password: <%= ENV["BUDGET_APP_RAILS_DATABASE_PASSWORD"] %>
